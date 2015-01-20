@@ -1,6 +1,6 @@
 {
   "name": "nd-alert",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "又一个基于 dialog 的标准模态对话框。",
   "keywords": [],
   "homepage": "https://github.com/ndfront/nd-alert",
@@ -27,7 +27,7 @@
     "main": "index.js",
     "dependencies": {
       "jquery": "1.11.1",
-      "nd-confirm": "0.1.1"
+      "nd-confirm": "0.1.2"
     },
     "devDependencies": {
       "expect.js": "0.3.1"
