@@ -27,7 +27,7 @@
     "main": "index.js",
     "dependencies": {
       "jquery": "1.11.1",
-      "nd-confirm": "0.1.2"
+      "nd-confirm": "1.0.0"
     },
     "devDependencies": {
       "expect.js": "0.3.1"

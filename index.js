@@ -25,7 +25,8 @@ var instance;
 Alert.show = function(message, onConfirm, options) {
   var defaults = {
     message: message,
-    title: '确认框'
+    title: '确认框',
+    afterHide: null
   };
 
   defaults = $.extend(null, defaults, options);
@@ -33,10 +34,7 @@ Alert.show = function(message, onConfirm, options) {
   if (instance) {
     instance.set(defaults);
   } else {
-    instance = new Alert(defaults).after('hide', function() {
-      // reset instance
-      instance = null;
-    });
+    instance = new Alert(defaults);
   }
 
   if (onConfirm) {
