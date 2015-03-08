@@ -1,6 +1,6 @@
 {
   "name": "nd-alert",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "又一个基于 dialog 的标准模态对话框。",
   "keywords": [],
   "homepage": "https://github.com/ndfront/nd-alert",
