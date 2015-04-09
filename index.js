@@ -25,7 +25,7 @@ var instance;
 Alert.show = function(message, onConfirm, options) {
   var defaults = {
     message: message,
-    title: '确认框',
+    title: '请注意',
     afterHide: null
   };
 
