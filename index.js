@@ -15,6 +15,7 @@ var $ = require('jquery'),
 var Alert = Confirm.extend({
 
   attrs: {
+    className: 'ui-dialog-alert',
     cancelTpl: ''
   }
 

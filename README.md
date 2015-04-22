@@ -1,6 +1,6 @@
 # nd-alert
 
-[![spm version](http://spmjs.io/badge/nd-alert)](http://spmjs.io/package/nd-alert)
+[![spm version](http://spm.rossjs.com/badge/nd-alert)](http://spm.rossjs.com/package/nd-alert)
 
 > 又一个基于 dialog 的标准模态对话框。fork 自 [arale-dialog](https://github.com/aralejs/dialog)
 
