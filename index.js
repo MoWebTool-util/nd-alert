@@ -50,6 +50,7 @@ Alert.show = function(message, onConfirm, options) {
 Alert.hide = function() {
   if (instance) {
     instance.hide();
+    instance = null;
   }
 };
 
