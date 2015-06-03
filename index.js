@@ -37,7 +37,9 @@ Alert.show = function(message, onConfirm, options) {
     instance.set(defaults);
     instance.off('confirm');
   } else {
-    instance = new Alert(defaults);
+    instance = new Alert(defaults).after('hide', function() {
+      instance = null;
+    });
   }
 
   if (onConfirm) {
@@ -50,7 +52,6 @@ Alert.show = function(message, onConfirm, options) {
 Alert.hide = function() {
   if (instance) {
     instance.hide();
-    instance = null;
   }
 };
 
