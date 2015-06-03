@@ -26,20 +26,21 @@ var instance;
 Alert.show = function(message, onConfirm, options) {
   var defaults = {
     message: message,
-    title: '请注意',
-    afterHide: null
+    title: '请注意'
   };
 
-  defaults = $.extend(null, defaults, options);
+  if (options) {
+    $.extend(defaults, options);
+  }
 
   if (instance) {
     instance.set(defaults);
+    instance.off('confirm');
   } else {
     instance = new Alert(defaults);
   }
 
   if (onConfirm) {
-    instance.off('confirm');
     instance.on('confirm', onConfirm);
   }
 
