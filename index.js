@@ -1,13 +1,14 @@
 /**
- * Description: index.js
- * Author: crossjs <liwenfu@crossjs.com>
- * Date: 2014-12-19 13:23:15
+ * @module Alert
+ * @author crossjs <liwenfu@crossjs.com>
  */
 
 'use strict';
 
-var $ = require('jquery'),
-  Confirm = require('nd-confirm');
+var $ = require('jquery');
+
+var __ = require('nd-i18n');
+var Confirm = require('nd-confirm');
 
 // Alert
 // -------
@@ -26,7 +27,7 @@ var instance;
 Alert.show = function(message, onConfirm, options) {
   var defaults = {
     message: message,
-    title: '请注意'
+    title: __('请注意')
   };
 
   if (options) {
