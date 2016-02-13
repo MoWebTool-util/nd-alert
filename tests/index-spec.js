@@ -5,8 +5,6 @@ var expect = require('expect.js');
 var $ = require('jquery');
 var mask = require('nd-mask');
 
-// require('../src/confirm.css');
-
 /*globals describe,it,afterEach*/
 
 describe('Alert', function() {

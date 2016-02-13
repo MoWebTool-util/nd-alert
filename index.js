@@ -1,13 +1,14 @@
 /**
- * Description: index.js
- * Author: crossjs <liwenfu@crossjs.com>
- * Date: 2014-12-19 13:23:15
+ * @module Alert
+ * @author crossjs <liwenfu@crossjs.com>
  */
 
 'use strict';
 
-var $ = require('jquery'),
-  Confirm = require('nd-confirm');
+var $ = require('jquery');
+
+var __ = require('nd-i18n');
+var Confirm = require('nd-confirm');
 
 // Alert
 // -------
@@ -15,6 +16,7 @@ var $ = require('jquery'),
 var Alert = Confirm.extend({
 
   attrs: {
+    className: 'ui-dialog-alert',
     cancelTpl: ''
   }
 
@@ -25,22 +27,23 @@ var instance;
 Alert.show = function(message, onConfirm, options) {
   var defaults = {
     message: message,
-    title: '确认框'
+    title: __('请注意')
   };
 
-  defaults = $.extend(null, defaults, options);
+  if (options) {
+    $.extend(defaults, options);
+  }
 
   if (instance) {
     instance.set(defaults);
+    instance.off('confirm');
   } else {
     instance = new Alert(defaults).after('hide', function() {
-      // reset instance
       instance = null;
     });
   }
 
   if (onConfirm) {
-    instance.off('confirm');
     instance.on('confirm', onConfirm);
   }
 
