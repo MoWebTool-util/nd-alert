@@ -2,7 +2,7 @@
 
 var Alert = require('../index');
 var expect = require('expect.js');
-var $ = require('jquery');
+var $ = require('nd-jquery');
 var mask = require('nd-mask');
 
 /*globals describe,it,afterEach*/
