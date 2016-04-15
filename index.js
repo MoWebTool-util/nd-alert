@@ -6,8 +6,6 @@
 'use strict';
 
 var $ = require('nd-jquery');
-
-var __ = require('nd-i18n');
 var Confirm = require('nd-confirm');
 
 // Alert
@@ -27,7 +25,7 @@ var instance;
 Alert.show = function(message, onConfirm, options) {
   var defaults = {
     message: message,
-    title: __('请注意')
+    title: '请注意'
   };
 
   if (options) {
