@@ -1,6 +1,6 @@
 {
   "name": "nd-alert",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "又一个基于 dialog 的标准模态对话框。",
   "keywords": [],
   "homepage": "https://github.com/ndfront/nd-alert",
@@ -9,9 +9,10 @@
     "email": "liwenfu@crossjs.com"
   },
   "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
     "test": "karma start ./karma.conf.js",
-    "test:dev": "npm run test -- --dev --watch",
-    "coverage": "node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha -- --bail --timeout 200 --slow 99999 -R dot tests/**/*-spec.js"
+    "test:dev": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,7 @@
   "dependencies": {
     "nd-confirm": "^3.0.1",
     "nd-i18n": "^3.0.1",
-    "nd-jquery": "^2.2.1"
+    "nd-jquery": "^2.2.2"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
@@ -33,7 +34,7 @@
     "nd-mask": "^3.0.0",
     "anywhere": "^1.2.0",
     "chai": "^3.5.0",
-    "eslint": "^2.5.1",
+    "eslint": "^2.9.0",
     "eslint-plugin-import": "^1.1.0",
     "eslint-plugin-mocha": "^2.0.0",
     "handlebars-loader": "^1.1.4",
